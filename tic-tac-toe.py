@@ -8,7 +8,7 @@ def print_board(board):
             print("  ---+---+---")
     print()
 
-    
+
 """Check if the current player has won already"""
 def check_winner(board, player):
     for row in board: 
@@ -26,3 +26,11 @@ def check_winner(board, player):
         return True
     
     return False
+
+"""Check if the game is a draw"""
+def is_draw(board):
+    for row in board:
+        for cell in row:
+            if cell == "":
+                return False
+    return True
