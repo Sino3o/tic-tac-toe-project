@@ -55,3 +55,31 @@ def get_move(board, player):
 def switch_player(player):
     return "O" if player =="X" else "X"
     
+"the main game"
+def play_game():
+    board = [
+        [" ", " ", " "],
+        [" ", " ", " "],
+        [" ", " ", " "]
+    ]
+
+    current_player = "X"
+    game_over = False
+    print("welcome to Tic Tac Toe!")
+    print("Players take turns entering row and column numbers from 0 to 2.")
+
+    while not game_over:
+        print_board(board)
+        row, col = get_move(board, current_player)
+        board[row][col] = current_player
+
+        if check_winner(board, current_player):
+            print_board(board)
+            print(f"Player {current_player} wins!")
+            game_over = True
+        elif is_draw(board):
+            print_board(board)
+            print("This game is a draw!")
+            game_over = True
+        else:
+            current_player = switch_player(current_player)
