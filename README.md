@@ -5,9 +5,9 @@ Player take turns entering their moves until one player wins or the game ends in
 # How to play: 
 Run the py file and start with the first player by selecting for rows and columns from 0-2
 # Including: 
-3x3 boards display
-Input valiadation
-Change turns
-Win detection
-Draw detection
+            3x3 boards display
+            Input valiadation
+            Change turns
+            Win detection
+            Draw detection
             
