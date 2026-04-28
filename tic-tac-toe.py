@@ -34,3 +34,24 @@ def is_draw(board):
             if cell == "":
                 return False
     return True
+
+"""check if the move is valid"""
+def get_move(board, player):
+    while True:
+        try:
+            row  = int(input(f"Player{player}, enter row(0-2): "))
+            col  = int(input(f"Player{player}, enter column(0-2): "))
+
+            if row < 0 or row > 2 or col < 0 or col > 2:
+                print("Invalid move. Row and column must be between 0 and 2.")
+            elif board[row][col] != " ":
+                print("That spot is already taken. Please choose another spot.")
+            else:
+                return row, col
+        except ValueError:
+            print("Invalid input. Please enter numbers only.")
+
+"""switch player"""
+def switch_player(player):
+    return "O" if player =="X" else "X"
+    
