@@ -31,7 +31,7 @@ def check_winner(board, player):
 def is_draw(board):
     for row in board:
         for cell in row:
-            if cell == "":
+            if cell == " ":
                 return False
     return True
 
@@ -83,3 +83,6 @@ def play_game():
             game_over = True
         else:
             current_player = switch_player(current_player)
+
+if __name__ == "__main__":
+    play_game()
